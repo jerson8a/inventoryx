@@ -1,0 +1,16 @@
+/* @use '../../assets/styles/variables.scss'; */
+
+.footer {
+    height: 100px;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+.footer p {
+    margin: 0;
+}

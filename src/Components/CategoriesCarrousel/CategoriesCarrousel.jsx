@@ -1,6 +1,6 @@
 import React from 'react';
 import { CaretLeftFill, CaretRightFill, Shop } from 'react-bootstrap-icons';
-import './CategoriesCarrousel.scss';
+import './CategoriesCarrousel.css';
 
 const CategoriesCarrousel = () => {
 

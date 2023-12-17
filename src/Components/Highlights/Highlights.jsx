@@ -1,6 +1,6 @@
 import React from 'react';
 import emptyStreet from '../../assets/img/empty_street.svg';
-import './Highlights.scss';
+import './Highlights.css';
 
 const Highlights = () => {
     return (

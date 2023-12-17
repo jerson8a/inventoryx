@@ -5,6 +5,7 @@ import ErrorPage from './Pages/ErrorPage/ErrorPage.jsx';
 import reportWebVitals from './reportWebVitals';
 import { createBrowserRouter, RouterProvider, Route } from 'react-router-dom';
 import './index.css';
+import '../src/assets/styles/variables.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 const router = createBrowserRouter([

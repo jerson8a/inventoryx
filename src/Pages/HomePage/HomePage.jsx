@@ -3,7 +3,7 @@ import { Search, PersonFill, List } from 'react-bootstrap-icons';
 import CategoriesCarrousel from '../../Components/CategoriesCarrousel/CategoriesCarrousel';
 import Footer from '../../Components/Footer/Footer';
 import Highlights from '../../Components/Highlights/Highlights';
-import './HomePage.scss';
+import './HomePage.css';
 
 const HomePage = () => {
     return (
