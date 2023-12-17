@@ -1,0 +1,72 @@
+@use './../../assets/styles/variables.scss';
+
+.homeHeader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    max-width: 100%;
+    height: 350px;
+    background-color: variables.$color-primary;
+    
+    .homeHeader__navbar {
+        width: 99vw;
+        height: 50px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 5px;
+        position: relative;
+    }
+
+    .homeHeader__navbarButtons {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    
+        svg {
+            background-color: variables.$color-white;
+            font-size: 24px;
+            padding: 10px;
+            border-radius: 25px;
+            cursor: pointer;
+        }
+    }
+    
+    .homeHeader__navbar-input {
+        color: black;
+        background-color: variables.$color-white;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        height: 40px;
+        width: 300px;
+        border-radius: 20px;
+        padding: 0 10px;
+        margin-right: 5px;
+        overflow: hidden;
+    
+        input {
+            background-color: transparent;
+            flex-grow: 1;
+            border: none;
+            outline: none;
+            margin: 0 10px;
+            font-size: 16px;
+            font-weight: lighter;
+        }
+    }
+
+    h1 {
+        color: variables.$color-white;
+        font-size: 5rem;
+        margin-bottom: 0;
+    }
+
+    p {
+        color: variables.$color-white;
+        margin: 0;
+    }
+}
+
