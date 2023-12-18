@@ -24,7 +24,7 @@ const HomePage = () => {
                     </div>
                 </nav>
                 <h1>Inventory X</h1>
-                <p>Your digital store</p>
+                <p>Always available</p>
             </header>
             <CategoriesCarrousel />
             <Highlights />
