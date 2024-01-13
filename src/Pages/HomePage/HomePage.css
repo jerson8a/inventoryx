@@ -30,6 +30,7 @@
     justify-content: space-between;
     padding: 0 5px;
     position: relative;
+    padding: 5px;
 }
 
 .homeHeader__navbarButtons {
