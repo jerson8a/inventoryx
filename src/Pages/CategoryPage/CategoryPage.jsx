@@ -2,6 +2,7 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 import Navbar from '../../Components/Navbar/Navbar';
 import './CategoryPage.css';
+import StoreItem from '../../Components/StoreItem/StoreItem';
 
 const CategoryPage = () => {
     
@@ -11,21 +12,21 @@ const CategoryPage = () => {
         {
             storeId: '1',
             storeName: 'La Torre',
-            storeImg: '',
+            storeImg: 'https://parquelasamericas.com.gt/wp-content/uploads/2018/05/La-Torre.jpg',
             storeDescription: '',
             storeSchedule: 'Horario: Lunes a viernes 09:00 a 21:00',
         },
         {
             storeId: '2',
             storeName: 'Walmart',
-            storeImg: '',
+            storeImg: 'https://revcycleintelligence.com/images/site/features/WalmartLogo.jpg',
             storeDescription: '',
             storeSchedule: 'Horario: Lunes a viernes 09:00 a 21:00',
         },
         {
             storeId: '3',
             storeName: 'La Barata',
-            storeImg: '',
+            storeImg: 'https://www.bolsadetrabajoss.com/wp-content/uploads/2019/11/LA-BARATA-EMPLEOS.png',
             storeDescription: '',
             storeSchedule: 'Horario: Lunes a viernes 09:00 a 21:00',
         },
@@ -41,13 +42,7 @@ const CategoryPage = () => {
                 {
                     storesArray.map((item, index) => {
                         return (
-                                <div className="storeItem">
-                                    <img src="https://parquelasamericas.com.gt/wp-content/uploads/2018/05/La-Torre.jpg" alt="La Torre" />
-                                    <h3>{item.storeName}</h3>
-                                    <p>{item.storeSchedule}</p>
-                                    <p className="storeItem__Delivery"><strong>Servicio a domicilio: </strong> SI</p>
-                                </div>
-
+                            <StoreItem imgSource={item.storeImg} storeName={item.storeName} storeSchedule={item.storeSchedule} />
                         )
                     })
                 }
