@@ -6,6 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import { createBrowserRouter, RouterProvider, Route } from 'react-router-dom';
 import './index.css';
 import '../src/assets/styles/variables.css';
+import CategoryPage from './Pages/CategoryPage/CategoryPage.jsx';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 const router = createBrowserRouter([
@@ -13,7 +14,12 @@ const router = createBrowserRouter([
         path: '/', 
         element: <HomePage />,
         errorElement: <ErrorPage />,
-    }
+    },
+    {
+        path: '/category/:categoryId',
+        element: <CategoryPage />,
+        errorElement: <ErrorPage />,
+    },
 ])
 
 root.render(

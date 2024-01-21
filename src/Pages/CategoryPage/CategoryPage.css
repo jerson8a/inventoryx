@@ -1,0 +1,51 @@
+.categoryPage {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.categoryPage__Banner {
+    height: 30vh;
+    min-height: 200px;
+    width: 100%;
+    background-color: var(--color-primary);
+    text-align: center;
+}
+
+.categoryPage__Banner h1 {
+    color: var(--color-white);
+}
+
+.categoryPage__items {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: first baseline;
+    flex-wrap: wrap;
+}
+
+.storeItem {
+    border: 2px solid var(--color-primary);
+    height: 200px;
+    width: 400px;
+    margin: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.storeItem:hover {
+    background-color: var(--color-primary-opacity);
+    transition: .5s ease;
+}
+
+.storeItem img {
+    width: 100%;
+    height: 60%;
+    object-fit: contain;
+}
+
+.storeItem h3,p {
+    margin: 0;
+    text-align: center;
+}

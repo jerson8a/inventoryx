@@ -1,0 +1,50 @@
+.navbar {
+    width: 99vw;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5px;
+    position: relative;
+    padding: 5px;
+}
+
+.navbarButtons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.navbarButtons svg {
+    background-color: var(--color-white);
+    font-size: 24px;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.navbar-input {
+    color: black;
+    background-color: var(--color-white);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 300px;
+    border-radius: 5px;
+    padding: 0 10px;
+    margin-right: 5px;
+    overflow: hidden;
+
+   
+}
+
+.navbar-input input {
+    background-color: transparent;
+    flex-grow: 1;
+    border: none;
+    outline: none;
+    margin: 0 10px;
+    font-size: 16px;
+    font-weight: lighter;
+}
