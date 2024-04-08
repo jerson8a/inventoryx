@@ -42,7 +42,7 @@ const CategoryPage = () => {
                 {
                     storesArray.map((item, index) => {
                         return (
-                            <StoreItem imgSource={item.storeImg} storeName={item.storeName} storeSchedule={item.storeSchedule} />
+                            <StoreItem storeId={item.storeId} imgSource={item.storeImg} storeName={item.storeName} storeSchedule={item.storeSchedule} />
                         )
                     })
                 }

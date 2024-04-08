@@ -1,6 +1,6 @@
 import React from 'react';
 import { CaretLeftFill, CaretRightFill, Shop } from 'react-bootstrap-icons';
-import { Navigate, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import './CategoriesCarrousel.css';
 
 const CategoriesCarrousel = () => {

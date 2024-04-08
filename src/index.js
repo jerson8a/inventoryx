@@ -7,6 +7,7 @@ import { createBrowserRouter, RouterProvider, Route } from 'react-router-dom';
 import './index.css';
 import '../src/assets/styles/variables.css';
 import CategoryPage from './Pages/CategoryPage/CategoryPage.jsx';
+import StorePage from './Pages/StorePage/StorePage.jsx';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 const router = createBrowserRouter([
@@ -18,6 +19,11 @@ const router = createBrowserRouter([
     {
         path: '/category/:categoryId',
         element: <CategoryPage />,
+        errorElement: <ErrorPage />,
+    },
+    {
+        path: '/store/:storeId',
+        element: <StorePage />,
         errorElement: <ErrorPage />,
     },
 ])
