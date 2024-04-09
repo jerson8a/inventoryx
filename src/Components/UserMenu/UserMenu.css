@@ -1,0 +1,36 @@
+.userMenu {
+    position: absolute;
+    right: 0;
+    top: 8px;
+    width: 250px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    height: 0;
+    visibility: hidden;
+}
+
+.userMenu__show {
+    visibility: visible;
+    height: fit-content;
+}
+
+.userMenu__item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+}
+
+.userMenu__item > svg {
+    background-color: transparent;
+}
+
+.userMenu__item:hover {
+    background-color: var(--color-primary-transparent);
+}
+
+.userMenu__item p{
+    color: black;
+}
