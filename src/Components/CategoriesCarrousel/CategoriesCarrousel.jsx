@@ -64,7 +64,7 @@ const CategoriesCarrousel = () => {
                 {
                     categoriesArray.map((item, index) => {
                         return (
-                            <div className="categoriesCarrousel__list-item" id={item.id} onClick={(e) => navigate(`/category/${item.id}`)}>
+                            <div className="categoriesCarrousel__list-item" key={item.id} id={item.id} onClick={(e) => navigate(`/category/${item.id}`)}>
                                 <Shop />
                                 <h4>{item.spanishName}</h4>
                             </div>

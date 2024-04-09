@@ -38,7 +38,7 @@ const Highlights = () => {
                 {
                     highlightStoresList.map((item, index) => {
                         return(
-                            <div className="highlights__item" onClick={() => navigate(`/store/${item.storeId}`)}>
+                            <div className="highlights__item" key={item.storeId} onClick={() => navigate(`/store/${item.storeId}`)}>
                                 <img src={item.storeImg} alt="" />
                                 <h4>{item.storeName}</h4>
                                 <p>{item.storeDescription}</p>
