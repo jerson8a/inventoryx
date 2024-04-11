@@ -17,7 +17,7 @@
 }
 
 .navbarButtons svg {
-    background-color: var(--color-white);
+    background-color: var(--color-contrast);
     font-size: 24px;
     padding: 10px;
     border-radius: 5px;
@@ -34,9 +34,11 @@
     border-radius: 5px;
     padding: 0 10px;
     margin-right: 5px;
-    overflow: hidden;
+    overflow: hidden;  
+}
 
-   
+.navbar-input svg {
+    background-color: white;
 }
 
 .navbar-input input {
