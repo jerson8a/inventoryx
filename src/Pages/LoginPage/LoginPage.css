@@ -1,0 +1,71 @@
+.loginPage {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-primary);
+}
+
+.loginPage > h1 {
+    color: white;
+    font-size: 60px;
+}
+
+.loginPage__Form {
+    border: 2px solid var(--color-primary);
+    border-radius: 5px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+
+.loginGoogle {
+    width: 100%;
+}
+
+.loginInput {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    margin: 5px 0;
+    font-size: 20px;
+}
+
+.loginInput > input {
+    margin-left: 5px;
+    flex-grow: 1;
+    font-size: 22px;
+}
+
+.loginPage__Form button {
+    background-color: var(--color-contrast);
+    border: 1px solid black;
+    padding: 10px 0;
+    font-size: 22px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+    margin: 10px 0;
+}
+
+.loginPage__Form button:hover {
+    color: white;
+    background-color: var(--color-primary);
+}
+
+.loginPage__Form > a {
+    margin: 5px;
+    text-decoration: none;
+    color: black;
+}

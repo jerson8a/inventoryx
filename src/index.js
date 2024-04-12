@@ -10,6 +10,7 @@ import { Provider } from 'react-redux';
 import store from './store.js';
 import '../src/assets/styles/variables.css';
 import './index.css';
+import LoginPage from './Pages/LoginPage/LoginPage.jsx';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 const router = createBrowserRouter([
@@ -27,6 +28,11 @@ const router = createBrowserRouter([
         path: '/store/:storeId',
         element: <StorePage />,
         errorElement: <ErrorPage />,
+    },
+    {
+        path: '/login',
+        element: <LoginPage />,
+        errorElement: <ErrorPage />
     },
 ])
 

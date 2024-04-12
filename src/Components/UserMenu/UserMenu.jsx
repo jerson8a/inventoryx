@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { PersonCircle, Wallet2, CardList, DoorClosed, InfoCircle, CurrencyDollar, DoorOpen } from 'react-bootstrap-icons';
 import { useSelector, useDispatch } from 'react-redux';
 import { setSigned, setLogout } from '../../features/auth/authStore';
@@ -7,6 +8,7 @@ import './UserMenu.css';
 const UserMenu = () => {
     const isSigned = useSelector((state) => state.isSigned.value);
     const dispatch = useDispatch();
+    const navigate = useNavigate();
 
     return (
         <>
@@ -36,7 +38,7 @@ const UserMenu = () => {
                 </div>
                 : 
                 <div className="userMenu" id='userMenu'>
-                    <div className="userMenu__item" onClick={() => dispatch(setSigned())}>
+                    <div className="userMenu__item" onClick={() => navigate('/login')}>
                         <DoorOpen />
                         <p>Iniciar sesión</p>
                     </div>
