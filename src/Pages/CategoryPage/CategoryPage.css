@@ -17,10 +17,8 @@
 }
 
 .categoryPage__items {
-    flex-grow: 1;
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    align-items: first baseline;
-    flex-wrap: wrap;
+    justify-content: space-around;
+    flex-wrap: wrap;   
 }

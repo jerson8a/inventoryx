@@ -1,7 +1,7 @@
 import React from 'react';
-import emptyStreet from '../../assets/img/empty_street.svg';
-import './Highlights.css';
 import { useNavigate } from 'react-router-dom';
+import StoreItem from '../../Components/StoreItem/StoreItem';
+import './Highlights.css';
 
 const Highlights = () => {
 
@@ -41,16 +41,7 @@ const Highlights = () => {
                 {
                     highlightStoresList.map((item, index) => {
                         return(
-                            <div className="highlights__item" key={item.storeId} onClick={() => navigate(`/store/${item.storeId}`)}>
-                                <div className="highlights__itemHover">
-                                    <h2>{item.storeName}</h2>
-                                    <h3>{item.storeSchedule}</h3>
-                                    <p><strong>{item.storePhoneNumber}</strong></p>
-                                </div>
-                                <img src={item.storeImg} alt="" />
-                                <h4>{item.storeName}</h4>
-                                <p>{item.storeDescription}</p>
-                            </div>
+                            <StoreItem key={item.storeId} storeId={item.storeId} storeImg={item.storeImg} storeName={item.storeName} storeSchedule={item.storeSchedule} storePhoneNumber={item.storePhoneNumber} storeDescription={item.storeDescription}/>
                         )
                     })
                 }
