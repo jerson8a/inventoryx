@@ -15,7 +15,7 @@
     justify-content: center;
 }
 
-.storePage__banner h1, p {
+.storePage__banner > h1, .storePage__banner > p {
     color: var(--color-white);
     margin: 0;
 }

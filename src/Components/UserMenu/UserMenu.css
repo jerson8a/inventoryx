@@ -29,6 +29,12 @@
 
 .userMenu__item:hover {
     background-color: var(--color-primary-transparent);
+    color: white;
+}
+
+.userMenu__item:hover > p {
+    color: white;
+    font-weight: bold;
 }
 
 .userMenu__item p{

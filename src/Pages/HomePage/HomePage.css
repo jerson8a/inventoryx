@@ -14,7 +14,7 @@
     margin-bottom: 0;
 }
 
-.homeHeader p {
+.homeHeader > p {
     color: var(--color-white);
     margin: 0;
 }
