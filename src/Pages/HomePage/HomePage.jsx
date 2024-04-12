@@ -10,8 +10,8 @@ const HomePage = () => {
         <>
             <header className="homeHeader">
                 <Navbar />
-                <h1>Inventory X</h1>
-                <p>Always available</p>
+                <h1>Inventory x</h1>
+                <p>Tu mercado digital</p>
             </header>
             <CategoriesCarrousel />
             <Highlights />
