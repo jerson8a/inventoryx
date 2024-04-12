@@ -14,6 +14,7 @@ const Highlights = () => {
             storeImg: 'https://parquelasamericas.com.gt/wp-content/uploads/2018/05/La-Torre.jpg',
             storeDescription: 'Descripción de tienda 1',
             storeSchedule: 'Horario: Lunes a viernes 09:00 a 21:00',
+            storePhoneNumber: '7772-0111',
         },
         {
             storeId: '2',
@@ -21,6 +22,7 @@ const Highlights = () => {
             storeImg: 'https://revcycleintelligence.com/images/site/features/WalmartLogo.jpg',
             storeDescription: 'Descripción de tienda 2',
             storeSchedule: 'Horario: Lunes a viernes 09:00 a 21:00',
+            storePhoneNumber: '7772-0111',
         },
         {
             storeId: '3',
@@ -28,6 +30,7 @@ const Highlights = () => {
             storeImg: 'https://www.bolsadetrabajoss.com/wp-content/uploads/2019/11/LA-BARATA-EMPLEOS.png',
             storeDescription: 'Descripción de tienda 3',
             storeSchedule: 'Horario: Lunes a viernes 09:00 a 21:00',
+            storePhoneNumber: '7772-0111',
         },
     ]
 
@@ -39,6 +42,11 @@ const Highlights = () => {
                     highlightStoresList.map((item, index) => {
                         return(
                             <div className="highlights__item" key={item.storeId} onClick={() => navigate(`/store/${item.storeId}`)}>
+                                <div className="highlights__itemHover">
+                                    <h2>{item.storeName}</h2>
+                                    <h3>{item.storeSchedule}</h3>
+                                    <p><strong>{item.storePhoneNumber}</strong></p>
+                                </div>
                                 <img src={item.storeImg} alt="" />
                                 <h4>{item.storeName}</h4>
                                 <p>{item.storeDescription}</p>

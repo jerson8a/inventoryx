@@ -4,9 +4,9 @@
     --color-primary: #023430; /* #012534; */
     --color-contrast: #00ED64; 
     --color-primary-background: #00684A;
+    --color-primary-transparent: #023430c5;
 
     --color-white: #FFFFFF;
-    --color-primary-transparent: #01253422;
     --color-primary-opacity: #0125344b;
     --color-success: #B1FF05; /* #44b800; */
 }
