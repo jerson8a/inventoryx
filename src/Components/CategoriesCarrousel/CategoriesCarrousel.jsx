@@ -59,7 +59,7 @@ const CategoriesCarrousel = () => {
 
     return (
         <section className="categoriesCarrousel">
-            <CaretLeftFill className='categoriesCarrousel__arrow' onClick={() => scrollCarrousel(1)} />
+            {/* <CaretLeftFill className='categoriesCarrousel__arrow' onClick={() => scrollCarrousel(1)} /> */}
             <div className="categoriesCarrousel__list" id='categoriesCarrousel'>
                 {
                     categoriesArray.map((item, index) => {
@@ -72,7 +72,7 @@ const CategoriesCarrousel = () => {
                     })
                 }
             </div>
-            <CaretRightFill className='categoriesCarrousel__arrow' onClick={() => scrollCarrousel(2)}/>
+            {/* <CaretRightFill className='categoriesCarrousel__arrow' onClick={() => scrollCarrousel(2)}/> */}
         </section>
     )
 }
