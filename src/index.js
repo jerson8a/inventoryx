@@ -3,11 +3,13 @@ import ReactDOM from 'react-dom/client';
 import HomePage from './Pages/HomePage/HomePage';
 import ErrorPage from './Pages/ErrorPage/ErrorPage.jsx';
 import reportWebVitals from './reportWebVitals';
-import { createBrowserRouter, RouterProvider, Route } from 'react-router-dom';
-import './index.css';
-import '../src/assets/styles/variables.css';
 import CategoryPage from './Pages/CategoryPage/CategoryPage.jsx';
 import StorePage from './Pages/StorePage/StorePage.jsx';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import store from './store.js';
+import '../src/assets/styles/variables.css';
+import './index.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 const router = createBrowserRouter([
@@ -29,9 +31,11 @@ const router = createBrowserRouter([
 ])
 
 root.render(
-    <React.StrictMode>
-        <RouterProvider router={router} />
-    </React.StrictMode>
+    <Provider store={store}>
+        {/* <React.StrictMode> */}
+            <RouterProvider router={router} />
+        {/* </React.StrictMode> */}
+    </Provider>
 );
 
 // If you want to start measuring performance in your app, pass a function
