@@ -11,6 +11,7 @@ import store from './store.js';
 import '../src/assets/styles/variables.css';
 import './index.css';
 import LoginPage from './Pages/LoginPage/LoginPage.jsx';
+import RegisterPage from './Pages/RegisterPage/RegisterPage.jsx';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 const router = createBrowserRouter([
@@ -32,6 +33,11 @@ const router = createBrowserRouter([
     {
         path: '/login',
         element: <LoginPage />,
+        errorElement: <ErrorPage />
+    },
+    {
+        path: '/register',
+        element: <RegisterPage />,
         errorElement: <ErrorPage />
     },
 ])
