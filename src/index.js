@@ -1,22 +1,23 @@
 import React from 'react';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { Provider } from 'react-redux';
 import ReactDOM from 'react-dom/client';
 import HomePage from './Pages/HomePage/HomePage';
 import ErrorPage from './Pages/ErrorPage/ErrorPage.jsx';
 import reportWebVitals from './reportWebVitals';
 import CategoryPage from './Pages/CategoryPage/CategoryPage.jsx';
 import StorePage from './Pages/StorePage/StorePage.jsx';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import { Provider } from 'react-redux';
-import store from './store.js';
-import '../src/assets/styles/variables.css';
-import './index.css';
 import LoginPage from './Pages/LoginPage/LoginPage.jsx';
 import RegisterPage from './Pages/RegisterPage/RegisterPage.jsx';
+import store from './store.js';
+import '../src/assets/styles/variables.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './index.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 const router = createBrowserRouter([
     {
-        path: '/', 
+        path: '/home', 
         element: <HomePage />,
         errorElement: <ErrorPage />,
     },

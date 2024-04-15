@@ -1,3 +1,7 @@
-const axios = require('axios').default;
+import axios from 'axios';
 
-axios.defaults.baseURL = 'https://'
+const instanceAxios = axios.create({
+    baseURL: 'http://localhost:3001'
+})
+
+export default instanceAxios;
