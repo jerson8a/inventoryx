@@ -1,6 +1,7 @@
 import React from 'react';
-import './StorePage.css';
+
 import Navbar from '../../Components/Navbar/Navbar';
+import './StorePage.css';
 
 const StorePage = () => {
 
@@ -9,25 +10,25 @@ const StorePage = () => {
             itemName: 'Aceite Capullo 3000 ml',
             price: 67,
             currency: 'Q.',
-            mainImg: 'https://latorremx.vtexassets.com/arquivos/ids/179381/18454-frontal.jpg?v=637974885528300000',
+            mainImg: 'https://woodly.ecom.themepreview.xyz/home02/wp-content/uploads/sites/3/2023/08/fp-2-3.jpg',
         },
         {
             itemName: 'Capullo Repostera',
             price: 350,
             currency: 'Q.',
-            mainImg: 'https://latorremx.vtexassets.com/arquivos/ids/179381/18454-frontal.jpg?v=637974885528300000',
+            mainImg: 'https://woodly.ecom.themepreview.xyz/home02/wp-content/uploads/sites/3/2023/08/fp-2-3.jpg',
         },
         {
             itemName: 'Aceite Capullo 3000 ml',
             price: 67,
             currency: 'Q.',
-            mainImg: 'https://latorremx.vtexassets.com/arquivos/ids/179381/18454-frontal.jpg?v=637974885528300000',
+            mainImg: 'https://woodly.ecom.themepreview.xyz/home02/wp-content/uploads/sites/3/2023/08/fp-2-3.jpg',
         },
         {
             itemName: 'Aceite Capullo 3000 ml',
             price: 67,
             currency: 'Q.',
-            mainImg: 'https://latorremx.vtexassets.com/arquivos/ids/179381/18454-frontal.jpg?v=637974885528300000',
+            mainImg: 'https://woodly.ecom.themepreview.xyz/home02/wp-content/uploads/sites/3/2023/08/fp-2-3.jpg',
         },
     ]
 
@@ -44,10 +45,13 @@ const StorePage = () => {
                     itemsList.map((item, index) => {
                         return (
                             <div className="storePage__item">
-                                <img src={item.mainImg} alt={item.itemName} />
+                                <div className="storePage__itemImg">
+                                    <img src={item.mainImg} alt={item.itemName} />
+                                    <button><strong>Añadir al carrito</strong></button>
+
+                                </div>
                                 <h3>{item.itemName}</h3>
                                 <p>{item.currency}{parseFloat(item.price).toFixed(2)}</p>
-                                <button><strong>Añadir al carrito</strong></button>
                             </div>
                         )
                     })
