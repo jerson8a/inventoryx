@@ -46,7 +46,10 @@
     cursor: pointer;
     background-color: var(--color-white);
     text-align: center;
-    font-size: 12px;
+}
+
+.categoriesCarrousel__list-item > h4 {
+    font-size: 14px;
 }
 
 .categoriesCarrousel__list-item:hover {

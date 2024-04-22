@@ -8,8 +8,8 @@ import Navbar from '../../Components/Navbar/Navbar';
 const HomePage = () => {
     return (
         <>
+            <Navbar />
             <header className="homeHeader">
-                <Navbar />
                 <h1>Inventory x</h1>
                 <p>Tu mercado digital</p>
             </header>

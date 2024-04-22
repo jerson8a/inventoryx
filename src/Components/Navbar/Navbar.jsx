@@ -19,7 +19,7 @@ const Navbar = () => {
     }
 
     return (
-        <nav className="navbar">
+        <nav className="navbarComponent">
             {/* Menu button */}
             <div className="navbarButtons">
                 <List />

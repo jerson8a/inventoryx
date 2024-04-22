@@ -37,8 +37,8 @@ const CategoryPage = () => {
 
     return (
         <div className="categoryPage">
+            <Navbar />
             <div className="categoryPage__Banner">
-                <Navbar />
                 <h1>{categoryId}</h1>
             </div>
             <div className="categoryPage__items">

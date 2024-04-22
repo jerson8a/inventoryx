@@ -1,13 +1,13 @@
-.navbar {
-    width: 99vw;
+.navbarComponent {
+    width: 100vw;
     height: 50px;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding: 0 5px;
+    padding: 10px;
     position: relative;
-    padding: 5px;
+    background-color: var(--color-primary);
 }
 
 .navbarButtons {
@@ -18,8 +18,8 @@
 
 .navbarButtons svg {
     background-color: var(--color-contrast);
-    font-size: 24px;
-    padding: 10px;
+    font-size: 35px;
+    padding: 5px;
     border-radius: 5px;
     cursor: pointer;
 }

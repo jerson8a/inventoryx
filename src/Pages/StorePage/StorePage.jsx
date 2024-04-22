@@ -1,5 +1,6 @@
 import React from 'react';
 import './StorePage.css';
+import Navbar from '../../Components/Navbar/Navbar';
 
 const StorePage = () => {
 
@@ -14,7 +15,7 @@ const StorePage = () => {
             itemName: 'Capullo Repostera',
             price: 350,
             currency: 'Q.',
-            mainImg: 'https://capullo.com.gt/wp-content/uploads/2021/12/Grupo-116.png',
+            mainImg: 'https://latorremx.vtexassets.com/arquivos/ids/179381/18454-frontal.jpg?v=637974885528300000',
         },
         {
             itemName: 'Aceite Capullo 3000 ml',
@@ -32,6 +33,7 @@ const StorePage = () => {
 
     return (
         <div className="storePage">
+            <Navbar />
             <div className="storePage__banner">
                 <h1>La Torre</h1>
                 <p>Artículos de consumo diario</p>
