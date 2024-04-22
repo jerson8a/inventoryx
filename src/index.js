@@ -41,6 +41,11 @@ const router = createBrowserRouter([
         element: <RegisterPage />,
         errorElement: <ErrorPage />
     },
+    {
+        path: '/',
+        element: <HomePage />,
+        errorElement: <ErrorPage />,
+    },
 ])
 
 root.render(

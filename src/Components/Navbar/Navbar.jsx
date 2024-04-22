@@ -1,9 +1,12 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Search, PersonFill, List } from 'react-bootstrap-icons';
-import './Navbar.css'
 import UserMenu from '../UserMenu/UserMenu';
+import './Navbar.css'
 
 const Navbar = () => {
+
+    const navigate = useNavigate();
 
     const showMenu = () => {
         let cont = 0;
@@ -22,7 +25,7 @@ const Navbar = () => {
         <nav className="navbarComponent">
             {/* Menu button */}
             <div className="navbarButtons">
-                <List />
+                <List onClick={() => navigate('/home', {replace: true})} />
             </div>
             {/* Navbar buttons in the right */}
             <div className="navbarButtons">
