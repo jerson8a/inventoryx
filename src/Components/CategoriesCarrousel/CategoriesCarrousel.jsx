@@ -47,14 +47,6 @@ const CategoriesCarrousel = () => {
                                     id: 'LiquorStores',
                                     spanishName: 'Licores y más',
                                 },
-                                {
-                                    id: 'Cat1',
-                                    spanishName: 'cat1',
-                                },
-                                {
-                                    id: 'Cat2',
-                                    spanishName: 'cat2',
-                                },
                             ];
 
     return (
