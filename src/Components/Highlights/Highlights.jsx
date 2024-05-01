@@ -36,7 +36,7 @@ const Highlights = () => {
 
     return (
         <section className="highlights">
-            <h2>Nuestros destacados</h2>
+            <h2>Te puede interesar</h2>
             <div className="highlights__section">
                 {
                     highlightStoresList.map((item, index) => {
