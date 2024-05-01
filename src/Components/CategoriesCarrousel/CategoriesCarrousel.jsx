@@ -7,17 +7,6 @@ const CategoriesCarrousel = () => {
 
     const navigate = useNavigate();
 
-    const scrollCarrousel = (option) => {
-        const el = document.getElementById('categoriesCarrousel');
-        if (el) {
-            if (option === 1) {
-                el.scrollTo(el.scrollLeft - 300, 0)
-            } else {
-                el.scrollTo(el.scrollLeft + 300, 0)
-            }
-        }
-    }
-
     const categoriesArray = [
                                 {
                                     id: 'Supermarkets',
@@ -51,7 +40,7 @@ const CategoriesCarrousel = () => {
 
     return (
         <section className="categoriesCarrousel">
-            {/* <CaretLeftFill className='categoriesCarrousel__arrow' onClick={() => scrollCarrousel(1)} /> */}
+            <h3><strong>Categorías</strong></h3>
             <div className="categoriesCarrousel__list" id='categoriesCarrousel'>
                 {
                     categoriesArray.map((item, index) => {
@@ -64,7 +53,6 @@ const CategoriesCarrousel = () => {
                     })
                 }
             </div>
-            {/* <CaretRightFill className='categoriesCarrousel__arrow' onClick={() => scrollCarrousel(2)}/> */}
         </section>
     )
 }
