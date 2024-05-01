@@ -41,7 +41,7 @@
     background-color: white;
 }
 
-.navbar-input input {
+.navbar-input input, select {
     background-color: transparent;
     flex-grow: 1;
     border: none;

@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Search, PersonFill, List } from 'react-bootstrap-icons';
+import { Search, PersonFill, List, GeoAltFill } from 'react-bootstrap-icons';
 import UserMenu from '../UserMenu/UserMenu';
 import './Navbar.css'
 
@@ -30,8 +30,22 @@ const Navbar = () => {
             {/* Navbar buttons in the right */}
             <div className="navbarButtons">
                 <div className="navbar-input">
-                    <input type="text" placeholder='What are you looking for today?'/>
+                    <input type="text" placeholder='¿Qué necesitas hoy?'/>
                     <Search />
+                </div>
+                <div className="navbar-input">
+                    <select name="txtCity" id="txtCity">
+                        <option value="Guatemala" selected>Ciudad de Guatemala</option>
+                        <option value="Guatemala">Ciudad de Guatemala</option>
+                        <option value="Guatemala">Quetzaltenango</option>
+                        <option value="Guatemala">Antigua Guatemala</option>
+                        <option value="Guatemala">Santa Rosa</option>
+                        <option value="Guatemala">Escuintla</option>
+                        <option value="Guatemala">Zacapa</option>
+                        <option value="Guatemala">Jutiapa</option>
+                        <option value="Guatemala">Izabal</option>
+                    </select>
+                    <GeoAltFill />
                 </div>
                 <PersonFill fontSize={20} onClick={() => showMenu()}/>
                 <UserMenu />
