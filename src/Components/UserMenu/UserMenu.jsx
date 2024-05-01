@@ -38,7 +38,7 @@ const UserMenu = () => {
                 </div>
                 : 
                 <div className="userMenu" id='userMenu'>
-                    <div className="userMenu__item" onClick={() => navigate('/login')}>
+                    <div className="userMenu__item" onClick={() => navigate('/login', {replace: true}) }>
                         <DoorOpen />
                         <p>Iniciar sesión</p>
                     </div>

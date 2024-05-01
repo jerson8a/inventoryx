@@ -1,11 +1,12 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Search, PersonFill, List, GeoAltFill } from 'react-bootstrap-icons';
+import { Search, PersonFill, HouseFill, GeoAltFill } from 'react-bootstrap-icons';
+import { useSelector, useDispatch } from 'react-redux';
 import UserMenu from '../UserMenu/UserMenu';
 import './Navbar.css'
 
 const Navbar = () => {
-
+    const isSigned = useSelector((state) => state.isSigned.value);
     const navigate = useNavigate();
 
     const showMenu = () => {
@@ -25,7 +26,7 @@ const Navbar = () => {
         <nav className="navbarComponent">
             {/* Menu button */}
             <div className="navbarButtons">
-                <List onClick={() => navigate('/home', {replace: true})} />
+                <HouseFill onClick={() => navigate('/home', {replace: true})} />
             </div>
             {/* Navbar buttons in the right */}
             <div className="navbarButtons">
@@ -47,7 +48,19 @@ const Navbar = () => {
                     </select>
                     <GeoAltFill />
                 </div>
-                <PersonFill fontSize={20} onClick={() => showMenu()}/>
+                {
+                    isSigned ? 
+                    <PersonFill fontSize={20} onClick={() => showMenu()}/>
+                    : 
+                    <>
+                    <button className="navbar__loginButton" onClick={() => navigate('/login', {replace: true}) }>
+                        Iniciar sesión
+                    </button>
+                    <button className="navbar__signupButton" onClick={() => navigate('/login', {replace: true})}>
+                        Registrarme
+                    </button>
+                    </>
+                }
                 <UserMenu />
             </div>
         </nav>

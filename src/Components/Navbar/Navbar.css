@@ -5,7 +5,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding: 10px;
+    padding: 0 10px;
     position: absolute;
     background-color: transparent; /*(--color-primary); */
 }
@@ -16,12 +16,13 @@
     align-items: center;
 }
 
-.navbarButtons svg {
-    background-color: var(--color-contrast);
+.navbarButtons > svg {
+    background-color: var(--color-primary);
     font-size: 35px;
     padding: 5px;
     border-radius: 5px;
     cursor: pointer;
+    color: var(--color-white);
 }
 
 .navbar-input {
@@ -37,8 +38,12 @@
     overflow: hidden;  
 }
 
-.navbar-input svg {
+.navbar-input > svg {
     background-color: white;
+    font-size: 35px;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 .navbar-input input, select {
@@ -49,4 +54,28 @@
     margin: 0 10px;
     font-size: 16px;
     font-weight: lighter;
+}
+
+.navbar__loginButton {
+    height: 35px;
+    border: 3px solid var(--color-white);
+    border-radius: 4px;
+    background-color: transparent;
+    color: var(--color-white);
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 0 5px;
+}
+
+.navbar__signupButton {
+    height: 35px;
+    border: 3px solid var(--color-primary);
+    border-radius: 4px;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 0 5px;
 }

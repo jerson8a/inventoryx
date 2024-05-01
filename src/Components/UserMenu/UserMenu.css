@@ -3,7 +3,7 @@
     right: 8px;
     top: 45px;
     width: 250px;
-    background-color: white;
+    background-color: var(--color-contrast);
     display: flex;
     flex-direction: column;
     border-radius: 5px;
@@ -25,6 +25,9 @@
 
 .userMenu__item > svg {
     background-color: transparent;
+    font-size: 35px;
+    padding: 5px;
+    border-radius: 5px;
 }
 
 .userMenu__item:hover {
@@ -37,6 +40,7 @@
     font-weight: bold;
 }
 
-.userMenu__item p{
+.userMenu__item > p{
     color: black;
+    margin: 0 5px;
 }
