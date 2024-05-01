@@ -10,7 +10,7 @@ const HomePage = () => {
         <>
             <Navbar />
             <header className="homeHeader">
-                <h1>Inventory x</h1>
+                <h1>Inventory X</h1>
                 <p>Tu mercado digital</p>
             </header>
             <CategoriesCarrousel />

@@ -6,8 +6,8 @@
     align-items: center;
     justify-content: space-between;
     padding: 10px;
-    position: relative;
-    background-color: var(--color-primary);
+    position: absolute;
+    background-color: transparent; /*(--color-primary); */
 }
 
 .navbarButtons {
