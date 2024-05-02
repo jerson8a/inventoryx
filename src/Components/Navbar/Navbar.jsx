@@ -37,14 +37,13 @@ const Navbar = () => {
                 <div className="navbar-input">
                     <select name="txtCity" id="txtCity">
                         <option value="Guatemala" selected>Ciudad de Guatemala</option>
-                        <option value="Guatemala">Ciudad de Guatemala</option>
-                        <option value="Guatemala">Quetzaltenango</option>
-                        <option value="Guatemala">Antigua Guatemala</option>
-                        <option value="Guatemala">Santa Rosa</option>
-                        <option value="Guatemala">Escuintla</option>
-                        <option value="Guatemala">Zacapa</option>
-                        <option value="Guatemala">Jutiapa</option>
-                        <option value="Guatemala">Izabal</option>
+                        <option value="Quetzaltenango">Quetzaltenango</option>
+                        <option value="Antigua Guatemala">Antigua Guatemala</option>
+                        <option value="Santa Rosa">Santa Rosa</option>
+                        <option value="Escuintla">Escuintla</option>
+                        <option value="Zacapa">Zacapa</option>
+                        <option value="Jutiapa">Jutiapa</option>
+                        <option value="Izabal">Izabal</option>
                     </select>
                     <GeoAltFill />
                 </div>
