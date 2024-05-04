@@ -16,7 +16,7 @@ const StoreComponent = ({item}) => {
                 {
                     item.categories.map((item, index) => {
                         return (
-                            <p>{item}</p>
+                            <p key={index} >{item}</p>
                         )
                     })
                 }

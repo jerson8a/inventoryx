@@ -45,7 +45,7 @@ const Highlights = () => {
             delivery: ['PedidosYa',],
         },
         {
-            storeId: '3',
+            storeId: '4',
             storeName: 'La Barata',
             storeImg: 'https://www.bolsadetrabajoss.com/wp-content/uploads/2019/11/LA-BARATA-EMPLEOS.png',
             storeDescription: 'Descripción de tienda 3',

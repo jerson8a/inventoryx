@@ -35,8 +35,8 @@ const Navbar = () => {
                     <Search />
                 </div>
                 <div className="navbar-input">
-                    <select name="txtCity" id="txtCity">
-                        <option value="Guatemala" selected>Ciudad de Guatemala</option>
+                    <select name="txtCity" id="txtCity" defaultValue={'Guatemala'}>
+                        <option value="Guatemala">Ciudad de Guatemala</option>
                         <option value="Quetzaltenango">Quetzaltenango</option>
                         <option value="Antigua Guatemala">Antigua Guatemala</option>
                         <option value="Santa Rosa">Santa Rosa</option>
