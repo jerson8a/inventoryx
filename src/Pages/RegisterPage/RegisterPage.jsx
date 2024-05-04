@@ -81,7 +81,7 @@ const RegisterPage = () => {
                     <input type="password" name="txtConfirmPassword" id="txtConfirmPassword" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} required/>
                 </div>
                 <p className='labelNotSamePassword'>{password == confirmPassword ? '' : 'Contraseña no coincide'}</p>
-                <button type="submit" disabled={!password || password != confirmPassword}>{isLoading ? <Spinner animation='border' variant='success'/> : 'Registrarme'}</button>
+                <button type="submit" disabled={!email || password != confirmPassword}>{isLoading ? <Spinner animation='border' variant='success'/> : 'Registrarme'}</button>
                 <a href="/login">Ya tengo una cuenta</a>
             </form>
         </div>
