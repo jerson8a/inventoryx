@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import StoreItem from '../../Components/StoreItem/StoreItem';
+import StoreComponent from '../StoreComponent/StoreComponent';
 import './Highlights.css';
 
 const Highlights = () => {
@@ -65,7 +65,7 @@ const Highlights = () => {
                 {
                     highlightStoresList.map((item, index) => {
                         return(
-                            <StoreItem key={item.storeId} item={item} />
+                            <StoreComponent key={item.storeId} item={item} />
                         )
                     })
                 }

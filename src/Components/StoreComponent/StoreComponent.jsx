@@ -1,9 +1,9 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import Rating from '@mui/material/Rating';
-import './StoreItem.css';
+import './StoreComponent.css';
 
-const StoreItem = ({item}) => {
+const StoreComponent = ({item}) => {
     const navigate = useNavigate();
 
     return (
@@ -26,4 +26,4 @@ const StoreItem = ({item}) => {
     )
 }
 
-export default StoreItem
+export default StoreComponent
