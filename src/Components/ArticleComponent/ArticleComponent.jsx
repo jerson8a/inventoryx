@@ -11,7 +11,6 @@ const ArticleComponent = ({item}) => {
 
     const addItem = () => {
         if (isSigned) {
-            console.log("Añadiendo item", item.itemId)
             dispatch(addItemToCart({itemId: item.itemId}));
         } else {
             navigate('/Login', {replace: true});
