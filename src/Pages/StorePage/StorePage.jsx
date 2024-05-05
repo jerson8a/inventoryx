@@ -2,29 +2,34 @@ import React from 'react';
 
 import Navbar from '../../Components/Navbar/Navbar';
 import './StorePage.css';
+import ArticleComponent from '../../Components/ArticleComponent/ArticleComponent';
 
 const StorePage = () => {
 
     const itemsList = [
         {
+            itemId: 1,
             itemName: 'Aceite Capullo 3000 ml',
             price: 67,
             currency: 'Q.',
             mainImg: 'https://woodly.ecom.themepreview.xyz/home02/wp-content/uploads/sites/3/2023/08/fp-2-3.jpg',
         },
         {
+            itemId: 2,
             itemName: 'Capullo Repostera',
             price: 350,
             currency: 'Q.',
             mainImg: 'https://woodly.ecom.themepreview.xyz/home02/wp-content/uploads/sites/3/2023/08/fp-2-3.jpg',
         },
         {
+            itemId: 3,
             itemName: 'Aceite Capullo 3000 ml',
             price: 67,
             currency: 'Q.',
             mainImg: 'https://woodly.ecom.themepreview.xyz/home02/wp-content/uploads/sites/3/2023/08/fp-2-3.jpg',
         },
         {
+            itemId: 4,
             itemName: 'Aceite Capullo 3000 ml',
             price: 67,
             currency: 'Q.',
@@ -44,15 +49,7 @@ const StorePage = () => {
                 {
                     itemsList.map((item, index) => {
                         return (
-                            <div className="storePage__item">
-                                <div className="storePage__itemImg">
-                                    <img src={item.mainImg} alt={item.itemName} />
-                                    <button><strong>Añadir al carrito</strong></button>
-
-                                </div>
-                                <h3>{item.itemName}</h3>
-                                <p>{item.currency}{parseFloat(item.price).toFixed(2)}</p>
-                            </div>
+                            <ArticleComponent key={item.itemId} item={item} />
                         )
                     })
                 }
