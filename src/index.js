@@ -9,6 +9,7 @@ import CategoryPage from './Pages/CategoryPage/CategoryPage.jsx';
 import StorePage from './Pages/StorePage/StorePage.jsx';
 import LoginPage from './Pages/LoginPage/LoginPage.jsx';
 import RegisterPage from './Pages/RegisterPage/RegisterPage.jsx';
+import CartPage from './Pages/CartPage/CartPage.jsx';
 import store from './store.js';
 import '../src/assets/styles/variables.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -44,6 +45,11 @@ const router = createBrowserRouter([
     {
         path: '/',
         element: <HomePage />,
+        errorElement: <ErrorPage />,
+    },
+    {
+        path: '/mycart',
+        element: <CartPage />,
         errorElement: <ErrorPage />,
     },
 ])

@@ -20,7 +20,7 @@ const UserMenu = () => {
                         <PersonCircle />
                         <p>Mi perfil</p>
                     </div>
-                    <div className="userMenu__item">
+                    <div className="userMenu__item" onClick={() => navigate('/mycart')}>
                         <Cart3 />
                         <p>Mi carrito {cart.length > 0 && `(${cart.length})` }</p>
                     </div>
