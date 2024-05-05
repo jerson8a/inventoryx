@@ -1,12 +1,13 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { PersonCircle, Wallet2, CardList, DoorClosed, InfoCircle, CurrencyDollar, DoorOpen } from 'react-bootstrap-icons';
+import { PersonCircle, Wallet2, CardList, DoorClosed, InfoCircle, CurrencyDollar, DoorOpen, Cart3 } from 'react-bootstrap-icons';
 import { useSelector, useDispatch } from 'react-redux';
 import { setSigned, setLogout } from '../../features/auth/authStore';
 import './UserMenu.css';
 
 const UserMenu = () => {
     const isSigned = useSelector((state) => state.isSigned.value);
+    const cart = useSelector((state) => state.marketCart.value);
     const dispatch = useDispatch();
     const navigate = useNavigate();
 
@@ -18,6 +19,10 @@ const UserMenu = () => {
                     <div className="userMenu__item">
                         <PersonCircle />
                         <p>Mi perfil</p>
+                    </div>
+                    <div className="userMenu__item">
+                        <Cart3 />
+                        <p>Mi carrito {cart.length > 0 && `(${cart.length})` }</p>
                     </div>
                     <div className="userMenu__item">
                         <Wallet2 />
