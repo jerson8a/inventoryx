@@ -11,7 +11,8 @@ const ArticleComponent = ({item}) => {
 
     const addItem = () => {
         if (isSigned) {
-            dispatch(addItemToCart({itemId: item.itemId}));
+            item.quantity = 1;
+            dispatch(addItemToCart(item));
         } else {
             navigate('/Login', {replace: true});
         }
@@ -22,7 +23,6 @@ const ArticleComponent = ({item}) => {
             <div className="articleComponent__itemImg">
                 <img src={item.mainImg} alt={item.itemName} />
                 <button onClick={() => (addItem())}><strong>Añadir al carrito</strong></button>
-
             </div>
             <h3>{item.itemName}</h3>
             <p>{item.currency}{parseFloat(item.price).toFixed(2)}</p>

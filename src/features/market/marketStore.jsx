@@ -8,10 +8,23 @@ export const marketCart = createSlice({
     reducers: {
         addItemToCart: (state, action) => {
             state.value = [...state.value, action.payload]
+        },
+        removeItemFromCart: (state, action) => {
+            state.value = state.value.filter((item) => {
+                return item.itemId != action.payload.itemId
+            })
+        },
+        updateItemQuantity: (state, action) => {
+            state.value = state.value.filter((item) => {
+                if (item.itemId == action.payload.itemId) {
+                    item.quantity = action.payload.quantity 
+                }
+                return item;
+            })
         }
     }
 })
 
-export const { addItemToCart, } = marketCart.actions;
+export const { addItemToCart, removeItemFromCart, updateItemQuantity, } = marketCart.actions;
 
 export default marketCart.reducer;

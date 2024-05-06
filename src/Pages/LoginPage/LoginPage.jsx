@@ -11,7 +11,7 @@ const LoginPage = () => {
     const isSigned = useSelector((state) => state.isSigned.value);
     const dispatch = useDispatch();
     const navigate = useNavigate();
-    const [email, setEmail] = useState();
+    const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [isLoading, setIsLoading] = useState(false);
 
