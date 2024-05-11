@@ -46,7 +46,7 @@
     cursor: pointer;
 }
 
-.navbar-input input, select {
+.navbar-input > input, .navbar-input > select {
     background-color: transparent;
     flex-grow: 1;
     border: none;

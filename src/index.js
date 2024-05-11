@@ -14,6 +14,7 @@ import store from './store.js';
 import '../src/assets/styles/variables.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
+import PaymentPage from './Pages/PaymentPage/PaymentPage.jsx';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 const router = createBrowserRouter([
@@ -51,6 +52,11 @@ const router = createBrowserRouter([
         path: '/mycart',
         element: <CartPage />,
         errorElement: <ErrorPage />,
+    },
+    {
+        path: '/payment',
+        element: <PaymentPage />,
+        errorElement: <ErrorPage />
     },
 ])
 

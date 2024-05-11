@@ -1,0 +1,64 @@
+.paymentPage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.paymentPage__header {
+    background-color: var(--color-primary);
+    height: 50px;
+    width: 100%;
+}
+
+.paymentPage__form {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    width: 70%;
+}
+
+.paymentPage__formItem {
+    color: black;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.paymentPage__formItem > label {
+    margin: 0 5px 0 0;
+}
+
+.paymentPage__formItem > input, .paymentPage__formItem > select {
+    flex-grow: 1;
+    margin: 5px;
+    font-size: 16px;
+}
+
+.paymentPage__formItemContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.paymentPage__formCardData {
+    flex-grow: 1;
+    margin-right: 50px;
+}
+
+.paymentPage__form > button {
+    margin: auto;
+    font-size: 28px;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    border: none;
+    padding: 5px 20px;
+    border-radius: 5px;
+    margin-bottom: 50px;
+}
+
+.paymentPage__totalText {
+    font-size: 26px;
+}
