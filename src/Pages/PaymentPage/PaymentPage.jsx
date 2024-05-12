@@ -95,16 +95,14 @@ const PaymentPage = () => {
                             <input type="tel" name='txtTelefono'/>
                         </div>
                     </div>
-                    <div className="paymentPage__formItemContainer">
-                    </div>
                     <p><strong>Datos de tarjeta</strong></p>
                     <div className="paymentPage__formItemContainer">
                         <div className='paymentPage__formCardData'>
                             <div className="paymentPage__formItem">
                                 <label htmlFor="txtCardName">Nombre del titular: </label>
-                                <input type="text" value={cardName} onChange={(e) => setCardName(e.target.value)} onFocus={(e) => setCardFocus('name')}/>
+                                <input type="text" value={cardName} onChange={(e) => setCardName(e.target.value)} onFocus={(e) => setCardFocus('name')} required/>
                                 <label htmlFor="txtCardName">Número en la tarjeta: </label>
-                                <input type="text" value={cardNumber} onChange={(e) => setCardNumber(e.target.value)} onFocus={(e) => setCardFocus('number')} placeholder='####-####-####-####'/>
+                                <input type="text" value={cardNumber} onChange={(e) => setCardNumber(e.target.value)} onFocus={(e) => setCardFocus('number')} placeholder='####-####-####-####' required/>
                             </div>
                             <div className="paymentPage__formItemContainer">
                                 <div className="paymentPage__formItem">
