@@ -10,11 +10,12 @@ import StorePage from './Pages/StorePage/StorePage.jsx';
 import LoginPage from './Pages/LoginPage/LoginPage.jsx';
 import RegisterPage from './Pages/RegisterPage/RegisterPage.jsx';
 import CartPage from './Pages/CartPage/CartPage.jsx';
-import store from './store.js';
-import '../src/assets/styles/variables.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import './index.css';
 import PaymentPage from './Pages/PaymentPage/PaymentPage.jsx';
+import PaymentResponsePage from './Pages/PaymentResponsePage/PaymentResponsePage.jsx';
+import store from './store.js';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import '../src/assets/styles/variables.css';
+import './index.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 const router = createBrowserRouter([
@@ -56,6 +57,11 @@ const router = createBrowserRouter([
     {
         path: '/payment',
         element: <PaymentPage />,
+        errorElement: <ErrorPage />
+    },
+    {
+        path: '/paymentResponse/:orderId',
+        element: <PaymentResponsePage />,
         errorElement: <ErrorPage />
     },
 ])

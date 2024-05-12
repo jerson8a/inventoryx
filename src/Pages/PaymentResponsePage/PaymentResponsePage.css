@@ -1,0 +1,35 @@
+.paymentResponsePage {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-primary);
+}
+
+.paymentResponsePage > svg {
+    color: white;
+    font-size: 104px;
+}
+
+.paymentResponsePage > h3 {
+    color: white;
+    margin: 15px;
+}
+
+.paymentResponsePage > p {
+    color: white;
+    margin: 0;
+}
+
+.paymentResponsePage > button {
+    margin: 5px;
+    font-size: 28px;
+    background-color: var(--color-primary-background);
+    color: var(--color-white);
+    border: none;
+    padding: 5px 20px;
+    border-radius: 5px;
+    margin-bottom: 50px;
+}
