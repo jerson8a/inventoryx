@@ -28,7 +28,7 @@
     font-size: small;
 }
 
-.articleComponent__item button {
+.buttonAddToCart, .buttonRemoveFromCart {
     background-color: var(--color-primary);
     color: var(--color-white);
     padding: 5px;
@@ -37,7 +37,10 @@
     font-size: 14px;
 }
 
-.articleComponent__item button:hover {
+.buttonAddToCart:hover {
     background-color: var(--color-primary-transparent);
-    /* border: 2px solid var(--color-primary-transparent); */
+}
+
+.buttonRemoveFromCart > svg {
+    font-size: 20px;
 }
