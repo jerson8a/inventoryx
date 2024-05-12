@@ -29,12 +29,14 @@
 
 .paymentPage__formItem > label {
     margin: 0 5px 0 0;
+    text-wrap: nowrap;
 }
 
 .paymentPage__formItem > input, .paymentPage__formItem > select {
-    flex-grow: 1;
     margin: 5px;
     font-size: 16px;
+    width: 80px;
+    flex-grow: 1;
 }
 
 .paymentPage__formItemContainer {
@@ -44,8 +46,7 @@
 }
 
 .paymentPage__formCardData {
-    flex-grow: 1;
-    margin-right: 50px;
+    width: 80%;
 }
 
 .paymentPage__form > button {

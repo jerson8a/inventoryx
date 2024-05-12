@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import Navbar from '../../Components/Navbar/Navbar';
@@ -11,10 +11,44 @@ const PaymentPage = () => {
     const dispatch = useDispatch();
     const navigate = useNavigate();
     const [cardCvc, setCardCvc] = useState('');
+    const [cardExpiryMonth, setCardExpiryMonth] = useState('');
+    const [cardExpiryYear, setCardExpiryYear] = useState('');
     const [cardExpiry, setCardExpiry] = useState('');
     const [cardFocus, setCardFocus] = useState('');
     const [cardName, setCardName] = useState('');
     const [cardNumber, setCardNumber] = useState('');
+    const [depto, setDepto] = useState('');
+    const [municipio, setMunicipio] = useState('');
+    const [munsList, setMunsList] = useState({deptoName: "Guatemala", muns: ['Guatemala']});
+
+    const deptos = [{
+        deptoName: 'Guatemala', 
+        muns: [
+            'Guatemala', 
+            'Mixco', 
+            'Santa Catarina Pinula',
+        ]
+    }, 
+    {
+        deptoName: 'Quetzaltenango',
+        muns: [
+            'Quetzaltenango',
+            'La Esperanza',
+        ]
+    }];
+
+    useEffect(() => {
+        setDepto(deptos[0].deptoName);
+    }, []);
+
+    useEffect(() => {
+        setMunsList(deptos.filter((item) => item.deptoName == depto)[0]);
+    }, [depto]);
+    
+
+    useEffect(() => {
+        setCardExpiry(`${cardExpiryMonth}/${cardExpiryYear}`)
+    }, [cardExpiryMonth, cardExpiryYear])
 
     return (
         <>
@@ -33,44 +67,55 @@ const PaymentPage = () => {
                     <div className="paymentPage__formItemContainer">
                         <div className="paymentPage__formItem">
                             <label htmlFor="txtDepartamento">Departamento: </label>
-                            <select name="txtDepartamento" id="txtDepartamento">
-                                <option value="Guatemala">Guatemala</option>
-                                <option value="Quetzaltenango">Quetzaltenango</option>
+                            <select name="txtDepartamento" id="txtDepartamento" value={depto} onChange={(e) => setDepto(e.target.value)}>
+                                {
+                                    deptos.map((item, index) => {
+                                        return (
+                                            <option key={index} value={item.deptoName}>{item.deptoName}</option>
+                                        )
+                                    })
+                                }
                             </select>
                         </div>
                         <div className="paymentPage__formItem">
                             <label htmlFor="txtMunicipio">Municipio: </label>
-                            <select name="txtMunicipio" id="txtMunicipio">
-                                <option value="Guatemala">Guatemala</option>
-                                <option value="Guatemala">Mixco</option>
-                                <option value="Guatemala">Santa Catarina Pinula</option>
+                            <select name="txtMunicipio" id="txtMunicipio" value={municipio} onChange={(e) => setMunicipio(e.target.value)}>
+                                {
+                                    munsList &&
+                                    munsList.muns.map((item, index) => {
+                                        return (
+                                            <option key={index} value={item}>{item}</option>
+                                        )
+                                    })
+                                }
                             </select>
                         </div>
-                    </div>
-                    <div className="paymentPage__formItemContainer">
                         <div className="paymentPage__formItem">
                             <label htmlFor="txtTelefono">Telefono: </label>
                             <input type="tel" name='txtTelefono'/>
                         </div>
                     </div>
                     <div className="paymentPage__formItemContainer">
+                    </div>
+                    <p><strong>Datos de tarjeta</strong></p>
+                    <div className="paymentPage__formItemContainer">
                         <div className='paymentPage__formCardData'>
-                            <div className="paymentPage__formItem">
-                                <label htmlFor="txtCardName">Número en la tarjeta: </label>
-                                <input type="text" value={cardNumber} onChange={(e) => setCardNumber(e.target.value)} onFocus={(e) => setCardFocus('number')}/>
-                            </div>
                             <div className="paymentPage__formItem">
                                 <label htmlFor="txtCardName">Nombre del titular: </label>
                                 <input type="text" value={cardName} onChange={(e) => setCardName(e.target.value)} onFocus={(e) => setCardFocus('name')}/>
+                                <label htmlFor="txtCardName">Número en la tarjeta: </label>
+                                <input type="text" value={cardNumber} onChange={(e) => setCardNumber(e.target.value)} onFocus={(e) => setCardFocus('number')} placeholder='####-####-####-####'/>
                             </div>
                             <div className="paymentPage__formItemContainer">
                                 <div className="paymentPage__formItem">
                                     <label htmlFor="txtCardName">Expiración: </label>
-                                    <input type="text" value={cardExpiry} onChange={(e) => setCardExpiry(e.target.value)} onFocus={(e) => setCardFocus('expiry')}/>
+                                    <input type="number" value={cardExpiryMonth} onChange={(e) => setCardExpiryMonth(e.target.value)} onFocus={(e) => setCardFocus('expiry')} placeholder='mm' required/>
+                                    <label htmlFor="txtCardName"> / </label>
+                                    <input type="numer" value={cardExpiryYear} onChange={(e) => setCardExpiryYear(e.target.value)} onFocus={(e) => setCardFocus('expiry')} placeholder='yy' required/>
                                 </div>
                                 <div className="paymentPage__formItem">
                                     <label htmlFor="txtCardName">Código de seguridad: </label>
-                                    <input type="text" value={cardCvc} onChange={(e) => setCardCvc(e.target.value)} onFocus={(e) => setCardFocus('cvc')} />
+                                    <input type="text" value={cardCvc} onChange={(e) => setCardCvc(e.target.value)} onFocus={(e) => setCardFocus('cvc')} placeholder='###' required />
                                 </div>
                             </div>
                         </div>
