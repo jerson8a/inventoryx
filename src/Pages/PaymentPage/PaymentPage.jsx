@@ -50,6 +50,12 @@ const PaymentPage = () => {
         setCardExpiry(`${cardExpiryMonth}/${cardExpiryYear}`)
     }, [cardExpiryMonth, cardExpiryYear])
 
+    const doPayment = (e) => {
+        e.preventDefault();
+
+        navigate('/paymentResponse/ABC123', {replace: true});
+    }
+
     return (
         <>
             <Navbar />
@@ -58,11 +64,11 @@ const PaymentPage = () => {
 
                 </div>
                 <h3><strong>Estas a un paso de completar tu compra</strong></h3>
-                <form className="paymentPage__form">
+                <form className="paymentPage__form" onSubmit={(e) => doPayment(e)}>
                     <h5>Completa tus datos</h5>
                     <div className="paymentPage__formItem">
                         <label htmlFor="txtDireccion">Dirección de entrega: </label>
-                        <input type="text" name='txtDireccion' />
+                        <input type="text" name='txtDireccion' required/>
                     </div>
                     <div className="paymentPage__formItemContainer">
                         <div className="paymentPage__formItem">
@@ -92,7 +98,7 @@ const PaymentPage = () => {
                         </div>
                         <div className="paymentPage__formItem">
                             <label htmlFor="txtTelefono">Telefono: </label>
-                            <input type="tel" name='txtTelefono'/>
+                            <input type="tel" name='txtTelefono' required/>
                         </div>
                     </div>
                     <p><strong>Datos de tarjeta</strong></p>
