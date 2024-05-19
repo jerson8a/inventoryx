@@ -31,7 +31,7 @@ const ArticleComponent = ({item}) => {
     return (
         <div className="articleComponent__item">
             <div className="articleComponent__itemImg">
-                <img src={item.mainImg} alt={item.itemName} />
+                <img src={item.itemImg} alt={item.itemName} />
                 {
                     isAddedToCart ?
                     <button className='buttonRemoveFromCart'><CartCheckFill /></button>

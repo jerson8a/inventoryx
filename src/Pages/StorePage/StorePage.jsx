@@ -12,28 +12,28 @@ const StorePage = () => {
             itemName: 'Aceite Capullo 3000 ml',
             price: 67,
             currency: 'Q.',
-            mainImg: 'https://woodly.ecom.themepreview.xyz/home02/wp-content/uploads/sites/3/2023/08/fp-2-3.jpg',
+            itemImg: 'https://woodly.ecom.themepreview.xyz/home02/wp-content/uploads/sites/3/2023/08/fp-2-3.jpg',
         },
         {
             itemId: 2,
             itemName: 'Capullo Repostera',
             price: 350,
             currency: 'Q.',
-            mainImg: 'https://woodly.ecom.themepreview.xyz/home02/wp-content/uploads/sites/3/2023/08/fp-2-3.jpg',
+            itemImg: 'https://woodly.ecom.themepreview.xyz/home02/wp-content/uploads/sites/3/2023/08/fp-2-3.jpg',
         },
         {
             itemId: 3,
             itemName: 'Cemento UGC 3000 PSI',
             price: 150.75,
             currency: 'Q.',
-            mainImg: 'https://cemacogt.vtexassets.com/arquivos/ids/377410/251458_1.jpg?v=638439158111270000',
+            itemImg: 'https://cemacogt.vtexassets.com/arquivos/ids/377410/251458_1.jpg?v=638439158111270000',
         },
         {
             itemId: 4,
             itemName: 'Aceite Capullo 3000 ml',
             price: 67,
             currency: 'Q.',
-            mainImg: 'https://woodly.ecom.themepreview.xyz/home02/wp-content/uploads/sites/3/2023/08/fp-2-3.jpg',
+            itemImg: 'https://woodly.ecom.themepreview.xyz/home02/wp-content/uploads/sites/3/2023/08/fp-2-3.jpg',
         },
     ]
 

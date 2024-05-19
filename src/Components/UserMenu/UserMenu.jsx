@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { PersonCircle, Wallet2, CardList, DoorClosed, InfoCircle, CurrencyDollar, DoorOpen, Cart3 } from 'react-bootstrap-icons';
+import { PersonCircle, Wallet2, CardList, DoorClosed, InfoCircle, CurrencyDollar, DoorOpen, Cart3, CardChecklist } from 'react-bootstrap-icons';
 import { useSelector, useDispatch } from 'react-redux';
 import { setSigned, setLogout } from '../../features/auth/authStore';
 import './UserMenu.css';
@@ -23,6 +23,10 @@ const UserMenu = () => {
                     <div className="userMenu__item" onClick={() => navigate('/mycart')}>
                         <Cart3 />
                         <p>Mi carrito {cart.length > 0 && `(${cart.length})` }</p>
+                    </div>
+                    <div className="userMenu__item" onClick={() => navigate('/dashboard')}>
+                        <CardChecklist />
+                        <p>Ver mis órdenes</p>
                     </div>
                     <div className="userMenu__item">
                         <Wallet2 />

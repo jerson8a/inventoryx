@@ -1,0 +1,37 @@
+.dashboardPage__header {
+    height: 50px;
+    background-color: var(--color-primary);
+}
+
+.dashboardPage__activeOrders {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.activeOrder__container {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    align-items: center;
+    margin: 10px;
+    border-bottom: 1px solid gray;
+}
+
+.activeOrder__item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 50%;
+    justify-content: space-between;
+}
+
+.activeOrder__item > button {
+    background-color: var(--color-primary);
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 3px;
+
+}
