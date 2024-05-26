@@ -83,6 +83,10 @@
     margin: 0 5px;
 }
 
+.userMenuMobile {
+    display: none;
+}
+
 @media (max-width: 735px) {
 
     .navbarComponent {
@@ -103,5 +107,20 @@
     .navbar-input > input, .navbar-input > select {
         margin: 0 5px;
         font-size: 12px;
+    }
+}
+
+@media (max-width: 975px) {
+    
+    .navbar__loginButton {
+        display: none;
+    }
+    
+    .navbar__signupButton {
+        display: none;
+    }
+
+    .userMenuMobile {
+        display: block;
     }
 }

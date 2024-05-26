@@ -60,6 +60,7 @@ const Navbar = () => {
                         </button>
                     </>
                 }
+                <PersonFill className='userMenuMobile' fontSize={20} onClick={() => showMenu()}/>
                 <UserMenu />
             </div>
         </nav>
