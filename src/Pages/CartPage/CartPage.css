@@ -20,6 +20,7 @@
     justify-content: space-around;
     width: 100%;
     font-size: 28px;
+    text-align: center;
 }
 
 .cartPage__listItems > button {

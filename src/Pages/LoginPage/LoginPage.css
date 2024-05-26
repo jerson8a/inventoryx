@@ -15,6 +15,7 @@
 
 .loginPage__Form {
     border: 2px solid var(--color-primary);
+    max-width: 99vw;
     border-radius: 5px;
     padding: 20px;
     display: flex;

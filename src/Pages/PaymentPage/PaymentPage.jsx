@@ -107,6 +107,8 @@ const PaymentPage = () => {
                             <div className="paymentPage__formItem">
                                 <label htmlFor="txtCardName">Nombre del titular: </label>
                                 <input type="text" value={cardName} onChange={(e) => setCardName(e.target.value)} onFocus={(e) => setCardFocus('name')} required/>
+                            </div>
+                            <div className="paymentPage__formItem">
                                 <label htmlFor="txtCardName">Número en la tarjeta: </label>
                                 <input type="text" value={cardNumber} onChange={(e) => setCardNumber(e.target.value)} onFocus={(e) => setCardFocus('number')} placeholder='####-####-####-####' required/>
                             </div>
@@ -114,8 +116,8 @@ const PaymentPage = () => {
                                 <div className="paymentPage__formItem">
                                     <label htmlFor="txtCardName">Expiración: </label>
                                     <input type="number" value={cardExpiryMonth} onChange={(e) => setCardExpiryMonth(e.target.value)} onFocus={(e) => setCardFocus('expiry')} placeholder='mm' required/>
-                                    <label htmlFor="txtCardName"> / </label>
-                                    <input type="numer" value={cardExpiryYear} onChange={(e) => setCardExpiryYear(e.target.value)} onFocus={(e) => setCardFocus('expiry')} placeholder='yy' required/>
+                                    <label htmlFor="txtCardExpiryYear"> / </label>
+                                    <input type="number" name='txtCardExpiryYear' value={cardExpiryYear} onChange={(e) => setCardExpiryYear(e.target.value)} onFocus={(e) => setCardFocus('expiry')} placeholder='yy' required/>
                                 </div>
                                 <div className="paymentPage__formItem">
                                     <label htmlFor="txtCardName">Código de seguridad: </label>

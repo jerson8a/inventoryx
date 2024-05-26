@@ -5,7 +5,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding: 0 10px;
+    padding: 10px 10px;
     position: absolute;
     background-color: transparent; /*(--color-primary); */
 }
@@ -14,6 +14,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .navbarButtons > svg {
@@ -23,6 +24,7 @@
     border-radius: 5px;
     cursor: pointer;
     color: var(--color-white);
+    margin: 5px;
 }
 
 .navbar-input {
@@ -35,6 +37,7 @@
     border-radius: 5px;
     padding: 0 10px;
     margin-right: 5px;
+    margin: 5px;
     overflow: hidden;  
 }
 
@@ -78,4 +81,27 @@
     font-weight: bold;
     cursor: pointer;
     margin: 0 5px;
+}
+
+@media (max-width: 735px) {
+
+    .navbarComponent {
+        padding: 0;
+    }
+
+    .navbarButtons > svg {
+        font-size: 36px;
+    }
+
+    .navbar-input {
+        width: 138px;
+        padding: 0 0px;
+        margin: 5px 1px;
+        height: auto;
+    }
+
+    .navbar-input > input, .navbar-input > select {
+        margin: 0 5px;
+        font-size: 12px;
+    }
 }

@@ -52,12 +52,12 @@ const Navbar = () => {
                     <PersonFill fontSize={20} onClick={() => showMenu()}/>
                     : 
                     <>
-                    <button className="navbar__loginButton" onClick={() => navigate('/login', {replace: true}) }>
-                        Iniciar sesión
-                    </button>
-                    <button className="navbar__signupButton" onClick={() => navigate('/login', {replace: true})}>
-                        Registrarme
-                    </button>
+                        <button className="navbar__loginButton" onClick={() => navigate('/login', {replace: true}) }>
+                            Iniciar sesión
+                        </button>
+                        <button className="navbar__signupButton" onClick={() => navigate('/login', {replace: true})}>
+                            Registrarme
+                        </button>
                     </>
                 }
                 <UserMenu />

@@ -19,3 +19,9 @@
 .orderItem__data > p {
     margin: 0;
 }
+
+@media (max-width: 735px) {
+    .orderItem {
+        width: 95%;
+    }
+}

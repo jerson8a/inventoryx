@@ -1,8 +1,9 @@
 .paymentPage {
-    display: flex;
     flex-direction: column;
+    display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 
 .paymentPage__header {
@@ -63,4 +64,28 @@
 
 .paymentPage__totalText {
     font-size: 26px;
+}
+
+@media (max-width: 1175px) {
+
+    .paymentPage__formCardData {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+    }
+
+    .paymentPage__formItemContainer {
+        flex-wrap: wrap;
+        width: 100%;
+        flex-grow: 1;
+    }
+
+    .paymentPage__form {
+        width: 95vw;
+    }
+
+    .paymentPage__formItem {
+        flex-wrap: wrap;
+        border: 2px solid blue;
+    }
 }
