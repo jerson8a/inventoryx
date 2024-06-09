@@ -123,4 +123,8 @@
     .userMenuMobile {
         display: block;
     }
+
+    .userMenuMobile {
+        display: none;
+    }
 }

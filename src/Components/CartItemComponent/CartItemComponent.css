@@ -53,3 +53,10 @@
 .cartItem__quantityTotal > svg:hover {
     color: red;
 }
+
+@media (max-width: 975px) {
+
+    .cartItem > img {
+        width: 100px;
+    }
+}

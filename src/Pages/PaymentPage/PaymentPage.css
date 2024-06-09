@@ -86,6 +86,11 @@
 
     .paymentPage__formItem {
         flex-wrap: wrap;
-        border: 2px solid blue;
+    }
+}
+
+@media (max-width: 975px) {
+    .paymentPage > h3 {
+        margin: 20px 0;
     }
 }

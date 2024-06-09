@@ -49,7 +49,7 @@ const Navbar = () => {
                 </div>
                 {
                     isSigned ? 
-                    <PersonFill fontSize={20} onClick={() => showMenu()}/>
+                    <PersonFill className='userMenuWeb' fontSize={20} onClick={() => showMenu()}/>
                     : 
                     <>
                         <button className="navbar__loginButton" onClick={() => navigate('/login', {replace: true}) }>

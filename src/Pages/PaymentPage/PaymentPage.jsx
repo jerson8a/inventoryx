@@ -68,12 +68,12 @@ const PaymentPage = () => {
                     <h5>Completa tus datos</h5>
                     <div className="paymentPage__formItem">
                         <label htmlFor="txtDireccion">Dirección de entrega: </label>
-                        <input type="text" name='txtDireccion' required/>
+                        <input type="text" name='txtDireccion' onFocus={(e) => setCardFocus('name')} required/>
                     </div>
                     <div className="paymentPage__formItemContainer">
                         <div className="paymentPage__formItem">
                             <label htmlFor="txtDepartamento">Departamento: </label>
-                            <select name="txtDepartamento" id="txtDepartamento" value={depto} onChange={(e) => setDepto(e.target.value)}>
+                            <select name="txtDepartamento" id="txtDepartamento" value={depto} onChange={(e) => setDepto(e.target.value)} onFocus={(e) => setCardFocus('name')}>
                                 {
                                     deptos.map((item, index) => {
                                         return (
@@ -85,7 +85,7 @@ const PaymentPage = () => {
                         </div>
                         <div className="paymentPage__formItem">
                             <label htmlFor="txtMunicipio">Municipio: </label>
-                            <select name="txtMunicipio" id="txtMunicipio" value={municipio} onChange={(e) => setMunicipio(e.target.value)}>
+                            <select name="txtMunicipio" id="txtMunicipio" value={municipio} onChange={(e) => setMunicipio(e.target.value)} onFocus={(e) => setCardFocus('name')}>
                                 {
                                     munsList &&
                                     munsList.muns.map((item, index) => {
@@ -98,7 +98,7 @@ const PaymentPage = () => {
                         </div>
                         <div className="paymentPage__formItem">
                             <label htmlFor="txtTelefono">Telefono: </label>
-                            <input type="tel" name='txtTelefono' required/>
+                            <input type="tel" name='txtTelefono' onFocus={(e) => setCardFocus('name')} required/>
                         </div>
                     </div>
                     <p><strong>Datos de tarjeta</strong></p>
@@ -131,7 +131,7 @@ const PaymentPage = () => {
 
                     <p className='paymentPage__totalText'><strong>Total a pagar: </strong>Q{cart.reduce((acc, curr) => acc + (curr.quantity * curr.price), 0).toFixed(2)}</p>
 
-                    <button>Pagar</button>
+                    <button onFocus={(e) => setCardFocus('name')}>Pagar</button>
 
                 </form>
             </div>
